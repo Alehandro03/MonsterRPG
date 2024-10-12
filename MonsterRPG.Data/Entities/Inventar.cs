@@ -8,5 +8,8 @@ namespace MonsterRPG.Data.Entities
 {
     public class Inventar
     {
+        public int Id { get; set; }
+
+        public List<Item> Items { get; set; }
     }
 }
