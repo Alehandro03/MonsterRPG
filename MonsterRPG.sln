@@ -5,6 +5,10 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterRPG.API", "MonsterRPG.API\MonsterRPG.API.csproj", "{8A59FE8E-93E6-4E15-83B0-DC5A89542237}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterRPG.Buiness", "MonsterRPG.Buiness\MonsterRPG.Buiness.csproj", "{1E304A89-2A95-4502-BCCF-0F10BBE146A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterRPG.Data", "MonsterRPG.Data\MonsterRPG.Data.csproj", "{C948CDF0-CEC0-4AD9-8EB9-638ACB02A564}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{8A59FE8E-93E6-4E15-83B0-DC5A89542237}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A59FE8E-93E6-4E15-83B0-DC5A89542237}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A59FE8E-93E6-4E15-83B0-DC5A89542237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E304A89-2A95-4502-BCCF-0F10BBE146A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E304A89-2A95-4502-BCCF-0F10BBE146A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E304A89-2A95-4502-BCCF-0F10BBE146A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E304A89-2A95-4502-BCCF-0F10BBE146A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C948CDF0-CEC0-4AD9-8EB9-638ACB02A564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C948CDF0-CEC0-4AD9-8EB9-638ACB02A564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C948CDF0-CEC0-4AD9-8EB9-638ACB02A564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C948CDF0-CEC0-4AD9-8EB9-638ACB02A564}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
