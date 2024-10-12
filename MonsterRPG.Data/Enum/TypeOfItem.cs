@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace MonsterRPG.Data.Enum
 {
-    public class TypeOfItem
+    public enum TypeOfItem
     {
+        BottleOfHealth =1,
+        Sword,
+        Onion,
+        Shield,
+        Helmet,
+        Armor,
+        Club,
+        Knife
     }
 }

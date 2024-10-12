@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace MonsterRPG.Data.Enum
 {
-    public class TypeOfMonster
+    public enum TypeOfMonster
     {
+        Dracon = 1,
+        Orc,
+        Undead,
+        Thief,
+        Mutant,
+        Wolf,
+        Elf,
+        People
     }
 }
