@@ -14,7 +14,9 @@ namespace MonsterRPG.Data.Entities
 
         public TypeOfItem TypeOfItem { get; set; }
 
-        public List<Inventar> Inventars { get; set; }
+        public Inventar Inventar { get; set; }
+
+        public Shop Shop { get; set; }
 
         public string Name { get; set; }
 
