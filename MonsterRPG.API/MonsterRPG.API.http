@@ -1,0 +1,6 @@
+@MonsterRPG.API_HostAddress = http://localhost:5036
+
+GET {{MonsterRPG.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
