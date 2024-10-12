@@ -10,6 +10,6 @@ namespace MonsterRPG.Data.Entities
     {
         public int Id { get; set; }
 
-        public List<Item> Items { get; set; }
+        public Item Item { get; set; }
     }
 }
