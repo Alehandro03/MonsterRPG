@@ -5,7 +5,7 @@ namespace MonsterRPG.API
 {
     public class MonsterContext : DbContext
     {
-        private const string _connString = "qweqwewqewq";
+        private const string _connString = "Data Source=ALEX;Initial Catalog=MonsterDb;Persist Security Info=True;User ID=Use1;Password=***********;Encrypt=True;Trust Server Certificate=True";
         public MonsterContext() : base(_connString)
         { 
         
