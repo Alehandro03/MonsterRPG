@@ -10,8 +10,8 @@ namespace MonsterRPG.Data.Entities
     [Table("Inventar")]
     public class Inventar
     {
-        public int Id { get; set; }
+        public int Id { get; set; } // Это и явл первич ключ
 
-        public List<Item> Items { get; set; }
+        public virtual ICollection<Item> Items { get; set; } //LazyLoading
     }
 }

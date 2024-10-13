@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MonsterRPG.API\MonsterRPG.API.csproj" />
+    <ProjectReference Include="..\MonsterRPG.Data\MonsterRPG.Data.csproj" />
+  </ItemGroup>
+
 </Project>

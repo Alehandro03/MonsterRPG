@@ -33,8 +33,8 @@ namespace MonsterRPG.Data.Entities
 
         public bool GoPVP { get; set; }
 
-        public Inventar Inventar { get; set; }
+        public virtual Inventar Inventar { get; set; }
 
-        public TypeOfMonster TypeOfMonster { get; set; }
+        public virtual TypeOfMonster TypeOfMonster { get; set; }
     }
 }

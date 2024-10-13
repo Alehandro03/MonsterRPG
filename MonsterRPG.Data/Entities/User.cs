@@ -20,6 +20,6 @@ namespace MonsterRPG.Data.Entities
 
         public string NickName { get; set; }
 
-        public Personage Personage { get; set; }
+        public virtual Personage Personage { get; set; }
     }
 }
