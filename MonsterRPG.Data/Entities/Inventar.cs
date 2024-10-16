@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MonsterRPG.Data.Entities
 {
-    [Table("Inventar")]
+    [Table("Inventar")]// Делает таблв БД в ед числе 
     public class Inventar
     {
         public int Id { get; set; } // Это и явл первич ключ
