@@ -1,4 +1,5 @@
-﻿using MonsterRPG.Data.Entities;
+﻿using Microsoft.Extensions.Options;
+using MonsterRPG.Data.Entities;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
@@ -10,14 +11,13 @@ namespace MonsterRPG.API.MonsterContext
         
         private const string _connString = "Data Source=ALEX;Initial Catalog=MonsterDb;Persist Security Info=True;User ID=Use1;Password=***********;Trust Server Certificate=True";
         public MonsterContext() : base (_connString)
-        {
-            
-        }
+        { }
 
-  
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        
         }
 
         public DbSet<User> Users { get; set; }
