@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MonsterRPG.Buiness
+namespace MonsterRPG.Buiness.Models
 {
-    public class Shop
+    public class ItemModel
     {
     }
 }

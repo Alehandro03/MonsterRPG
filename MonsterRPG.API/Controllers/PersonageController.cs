@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using MonsterRPG.Buiness;
+using MonsterRPG.Buiness.Models;
 
 namespace MonsterRPG.API.Controllers
 {
@@ -9,24 +10,24 @@ namespace MonsterRPG.API.Controllers
     public class PersonageController : Controller
     {
         [HttpGet("{id}")] // Прописываем в HTTP, рут для точного определения метода, в случае нескольких одинаковых запросах
-        public ActionResult<Personage>GetPersonageById(int id)
+        public ActionResult<PersonageModel>GetPersonageById(int id)
         {
             //Если не нашли то
             return NotFound($"Персонаж{id} не найден");
 
             //если нашли то
 
-            return Ok(new Personage());
+            return Ok(new PersonageModel());
         }
 
         [HttpGet] // Прописываем в HTTP, рут для точного определения метода, в случае нескольких одинаковых запросах
-        public ActionResult <List<Personage>> GetAllPersonage()
+        public ActionResult <List<PersonageModel>> GetAllPersonage()
         {
-            return Ok(new List<Personage>());
+            return Ok(new List<PersonageModel>());
         }
 
         [HttpPut]
-        public ActionResult UpdatePersonage(Personage personage)
+        public ActionResult UpdatePersonage(PersonageModel personage)
         {
             return Ok($"{personage} - was update!");
         }

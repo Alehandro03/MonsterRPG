@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MonsterRPG.Buiness;
+using MonsterRPG.Buiness.Models;
 
 namespace MonsterRPG.API.Controllers
 {
@@ -8,20 +9,20 @@ namespace MonsterRPG.API.Controllers
     public class ItemController : Controller
     {
         [HttpGet("{id}")]
-        public ActionResult<Item> GetItemById(int id)
+        public ActionResult<ItemModel> GetItemById(int id)
         {
             return Ok();
         }
 
         [HttpGet]
-        public ActionResult<List<Item>> GetItems()
+        public ActionResult<List<ItemModel>> GetItems()
         {
-            return Ok(new List<Item>());
+            return Ok(new List<ItemModel>());
 
         }
 
         [HttpPost]
-        public ActionResult AddItem(Item item)
+        public ActionResult AddItem(ItemModel item)
         {
             if (item == null) return BadRequest();
 
@@ -40,7 +41,7 @@ namespace MonsterRPG.API.Controllers
             return Ok("Was Deleted");
         }
         [HttpPut]
-        public ActionResult UpdateIten(int id, Item item)
+        public ActionResult UpdateIten(int id, ItemModel item)
         {
             return Ok($"{item} - was update");
         }

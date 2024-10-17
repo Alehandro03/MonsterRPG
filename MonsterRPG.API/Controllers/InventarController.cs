@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MonsterRPG.Buiness;
+using MonsterRPG.Buiness.Models;
 
 namespace MonsterRPG.API.Controllers
 {
@@ -8,7 +9,7 @@ namespace MonsterRPG.API.Controllers
     public class InventarController : Controller
     {
         [HttpPost]
-        public ActionResult<Item> AddItemInInventar()
+        public ActionResult<ItemModel> AddItemInInventar()
         {
             return Ok("Item was add in inventar");
         }
@@ -16,7 +17,7 @@ namespace MonsterRPG.API.Controllers
         [HttpGet]
         public ActionResult GetItemInInventar()
         {
-            return Ok(new List<Item>());
+            return Ok(new List<ItemModel>());
         }
 
     }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MonsterRPG.Buiness;
+using MonsterRPG.Buiness.Models;
 
 namespace MonsterRPG.API.Controllers
 {
@@ -20,7 +21,7 @@ namespace MonsterRPG.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<User> GetUserById(int id)
+        public ActionResult<UserModel> GetUserById(int id)
         {
             //Если не нашли то
             return NotFound($"User{id} was noy found");
@@ -31,7 +32,7 @@ namespace MonsterRPG.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<User>> GetUsers()
+        public ActionResult<List<UserModel>> GetUsers()
         {
 
 
@@ -39,7 +40,7 @@ namespace MonsterRPG.API.Controllers
         }
 
         [HttpPut]
-        public ActionResult<User> UpdateUser(int id)
+        public ActionResult<UserModel> UpdateUser(int id)
         {
             return Ok("Успешно изменен");
         }
