@@ -1,6 +1,6 @@
 ﻿namespace MonsterRPG.Buiness
 {
-    public class Class1
+    public class User
     {
 
     }
