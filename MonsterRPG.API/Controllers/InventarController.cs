@@ -1,6 +1,10 @@
-﻿namespace MonsterRPG.API.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace MonsterRPG.API.Controllers
 {
-    public class InventarController
+    [ApiController]
+    [Route("api/[controller]")] //api приписка служит для отличия урлы фронта от бека
+    public class InventarController : Controller
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonsterRPG.Buiness
 {
-    internal class Shop
+    public class Shop
     {
     }
 }

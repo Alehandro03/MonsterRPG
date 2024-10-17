@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MonsterRPG.Buiness;
 
 namespace MonsterRPG.API.Controllers
 {
@@ -14,12 +15,12 @@ namespace MonsterRPG.API.Controllers
 
         [HttpDelete]
         public ActionResult DeleteUser(int id)
-        {
+        {   
             return NoContent();
         }
 
-        [HttpGet]
-        public ActionResult GetUserById(int id)
+        [HttpGet("{id}")]
+        public ActionResult<User> GetUserById(int id)
         {
             //Если не нашли то
             return NotFound($"User{id} was noy found");
@@ -27,6 +28,20 @@ namespace MonsterRPG.API.Controllers
             //если нашли то
 
             //return Ok(new User());
+        }
+
+        [HttpGet]
+        public ActionResult<List<User>> GetUsers()
+        {
+
+
+            return Ok( UpdateUser);
+        }
+
+        [HttpPut]
+        public ActionResult<User> UpdateUser(int id)
+        {
+            return Ok("Успешно изменен");
         }
     }
 
