@@ -25,6 +25,23 @@ namespace MonsterRPG.API.Controllers
             return Ok(new List<Personage>());
         }
 
+        [HttpPut]
+        public ActionResult UpdatePersonage(Personage personage)
+        {
+            return Ok($"{personage} - was update!");
+        }
+
+        [HttpPut("{id}")]
+        public ActionResult SoftDeletePersonage(int id)
+        {
+            return Ok("Personage was deleted!");
+        }
+
+        [HttpDelete]
+        public ActionResult DeletePersonage(int id)
+        {
+            return Ok("Personage real deleted!");
+        }
 
     }
 }
