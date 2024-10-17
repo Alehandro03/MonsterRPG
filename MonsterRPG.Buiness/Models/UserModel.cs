@@ -14,6 +14,6 @@ namespace MonsterRPG.Buiness.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string NickName { get; set; }
-        public virtual Personage Personage { get; set; }
+        public  Personage Personage { get; set; }
     }
 }
