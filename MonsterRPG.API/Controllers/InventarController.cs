@@ -17,6 +17,7 @@ namespace MonsterRPG.API.Controllers
         [HttpGet]
         public ActionResult GetItemInInventar()
         {
+            // if was true List
             return Ok(new List<ItemModel>());
         }
 
