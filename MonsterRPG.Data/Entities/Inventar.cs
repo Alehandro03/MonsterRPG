@@ -11,7 +11,6 @@ namespace MonsterRPG.Data.Entities
     public class Inventar
     {
         public int Id { get; set; } // Это и явл первич ключ
-
         public virtual ICollection<Item> Items { get; set; } //LazyLoading
     }
 }

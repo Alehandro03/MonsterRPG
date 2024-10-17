@@ -11,7 +11,6 @@ namespace MonsterRPG.Data.Entities
     public class Shop
     {
         public int Id { get; set; }
-
         public virtual ICollection<Item> Items { get; set; }
     }
 }

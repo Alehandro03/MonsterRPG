@@ -14,4 +14,8 @@
     <ProjectReference Include="..\MonsterRPG.Data\MonsterRPG.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\Interface\" />
+  </ItemGroup>
+
 </Project>
