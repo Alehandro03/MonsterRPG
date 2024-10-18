@@ -8,6 +8,7 @@ namespace MonsterRPG.API.Controllers
     [Route("api/[controller]")] //api приписка служит для отличия урлы фронта от бека
     public class UserComtroller : Controller
     {
+        //api/user 
         [HttpPost]
         public ActionResult AddUser()
         {
@@ -30,16 +31,14 @@ namespace MonsterRPG.API.Controllers
 
             //return Ok(new User());
         }
-        // api/users
+        // api/user
         [HttpGet]
         public ActionResult<List<UserModel>> GetUsers()
         {
-
-
-            return Ok( UpdateUser);
+            return Ok();
         }
         // api/user/2
-        [HttpPut]
+        [HttpPut("{id}")]
         public ActionResult<UserModel> UpdateUser(int id)
         {
             return Ok("Успешно изменен");

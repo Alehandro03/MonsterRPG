@@ -8,20 +8,21 @@ namespace MonsterRPG.API.Controllers
     [Route("api/[controller]")] //api приписка служит для отличия урлы фронта от бека
     public class ShopController : Controller
     {
-        [HttpPost]
+        //api/shop/item
+        [HttpPost("/item")]
         public ActionResult AddNewItemInShop(ItemModel item)
         {
             return Ok($"{item} - was add in shop");
         }
-        //api/items
-        [HttpGet]
+        //api/shop/items
+        [HttpGet("/items")]
         public ActionResult<ItemModel> GetAllListItemInShop()
         {
             return Ok( new List<ItemModel>());
         }
-        // api/prsonage/2
-        [HttpDelete]
-        public ActionResult DeleteItemInShop(int id)
+        // api/shop/item/2
+        [HttpDelete("/item/{id}")]
+        public ActionResult SoftDeleteItemInShop(int id)
         {
             return Ok("Was deleted!");
         }

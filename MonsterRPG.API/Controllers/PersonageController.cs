@@ -20,13 +20,13 @@ namespace MonsterRPG.API.Controllers
 
             return Ok(new PersonageModel());
         }
-        //api/personages
+        //api/personage
         [HttpGet] // Прописываем в HTTP, рут для точного определения метода, в случае нескольких одинаковых запросах
         public ActionResult <List<PersonageModel>> GetAllPersonage()
         {
             return Ok(new List<PersonageModel>());
         }
-
+        //api/personage
         [HttpPut]
         public ActionResult UpdatePersonage(PersonageModel personage)
         {
@@ -39,10 +39,10 @@ namespace MonsterRPG.API.Controllers
             return Ok("Personage was deleted!");
         }
         // api/prsonage/2
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public ActionResult DeletePersonage(int id)
         {
-            return Ok("Personage real deleted!");
+            return NoContent();
         }
 
     }
