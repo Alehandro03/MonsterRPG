@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MonsterRPG.API.Models.InputModels;
+using MonsterRPG.API.Models.OutputModels;
 using MonsterRPG.Buiness;
 using MonsterRPG.Buiness.Models;
 
@@ -6,11 +8,11 @@ namespace MonsterRPG.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")] //api приписка служит для отличия урлы фронта от бека
-    public class UserComtroller : Controller
+    public class UserController : Controller
     {
         //api/user 
         [HttpPost]
-        public ActionResult AddUser()
+        public ActionResult<UserOutputModel> AddUser(UserInsertInputModel model)
         {
             return Ok("Успешно добавлен");
         }
@@ -39,7 +41,7 @@ namespace MonsterRPG.API.Controllers
         }
         // api/user/2
         [HttpPut("{id}")]
-        public ActionResult<UserModel> UpdateUser(int id)
+        public ActionResult<UserOutputModel> UpdateUser(int id, UserUpdateInputModel model)
         {
             return Ok("Успешно изменен");
         }

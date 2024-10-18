@@ -12,7 +12,7 @@ namespace MonsterRPG.Data.Entities
     [Table("Item")]
     public class Item
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public virtual TypeOfItem TypeOfItem { get; set; }
         public virtual Inventar Inventar { get; set; }
         public virtual Shop Shop { get; set; }

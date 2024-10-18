@@ -12,6 +12,7 @@ namespace MonsterRPG.API.Controllers
         [HttpGet("{id}")]
         public ActionResult<ItemModel> GetItemById(int id)
         {
+
             return Ok();
         }
         //api/item

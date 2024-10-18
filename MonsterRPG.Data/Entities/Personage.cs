@@ -11,7 +11,7 @@ namespace MonsterRPG.Data.Entities
     [Table("Personage")]
     public class Personage
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string Name { get; set; }
         public int Hp { get; set; }
         public int MinHp { get; set; }
