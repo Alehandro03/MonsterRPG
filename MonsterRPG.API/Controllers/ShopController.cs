@@ -13,13 +13,13 @@ namespace MonsterRPG.API.Controllers
         {
             return Ok($"{item} - was add in shop");
         }
-
+        //api/items
         [HttpGet]
         public ActionResult<ItemModel> GetAllListItemInShop()
         {
             return Ok( new List<ItemModel>());
         }
-
+        // api/prsonage/2
         [HttpDelete]
         public ActionResult DeleteItemInShop(int id)
         {

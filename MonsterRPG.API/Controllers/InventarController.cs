@@ -13,7 +13,7 @@ namespace MonsterRPG.API.Controllers
         {
             return Ok("Item was add in inventar");
         }
-
+        //api/items
         [HttpGet]
         public ActionResult GetItemInInventar()
         {

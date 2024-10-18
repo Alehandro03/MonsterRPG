@@ -13,13 +13,13 @@ namespace MonsterRPG.API.Controllers
         {
             return Ok("Успешно добавлен");
         }
-
+        // api/user/2
         [HttpDelete]
         public ActionResult DeleteUser(int id)
         {   
             return NoContent();
         }
-
+        // api/user/2
         [HttpGet("{id}")]
         public ActionResult<UserModel> GetUserById(int id)
         {
@@ -30,7 +30,7 @@ namespace MonsterRPG.API.Controllers
 
             //return Ok(new User());
         }
-
+        // api/users
         [HttpGet]
         public ActionResult<List<UserModel>> GetUsers()
         {
@@ -38,7 +38,7 @@ namespace MonsterRPG.API.Controllers
 
             return Ok( UpdateUser);
         }
-
+        // api/user/2
         [HttpPut]
         public ActionResult<UserModel> UpdateUser(int id)
         {

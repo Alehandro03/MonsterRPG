@@ -8,12 +8,13 @@ namespace MonsterRPG.API.Controllers
     [Route("api/[controller]")] //api приписка служит для отличия урлы фронта от бека
     public class ItemController : Controller
     {
+        // api/ItemModel/2
         [HttpGet("{id}")]
         public ActionResult<ItemModel> GetItemById(int id)
         {
             return Ok();
         }
-
+        //api/items
         [HttpGet]
         public ActionResult<List<ItemModel>> GetItems()
         {
@@ -28,18 +29,19 @@ namespace MonsterRPG.API.Controllers
 
             else return Ok($"{item} - was add");
         }
-
+        // api/ItemModel/2
         [HttpDelete]
         public ActionResult DeleteItem(int id)
         {
             return Ok("Was Deleted");
         }
-
+        // api/ItemModel/2
         [HttpPut("{id}")]
         public ActionResult SoftDeleteItem(int id)
         {
             return Ok("Was Deleted");
         }
+        // api/ItemModel/2
         [HttpPut]
         public ActionResult UpdateIten(int id, ItemModel item)
         {

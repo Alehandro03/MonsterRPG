@@ -9,6 +9,7 @@ namespace MonsterRPG.API.Controllers
     [Route("api/[controller]")] //api приписка служит для отличия урлы фронта от бека
     public class PersonageController : Controller
     {
+        // api/prsonage/2
         [HttpGet("{id}")] // Прописываем в HTTP, рут для точного определения метода, в случае нескольких одинаковых запросах
         public ActionResult<PersonageModel>GetPersonageById(int id)
         {
@@ -19,7 +20,7 @@ namespace MonsterRPG.API.Controllers
 
             return Ok(new PersonageModel());
         }
-
+        //api/personages
         [HttpGet] // Прописываем в HTTP, рут для точного определения метода, в случае нескольких одинаковых запросах
         public ActionResult <List<PersonageModel>> GetAllPersonage()
         {
@@ -31,13 +32,13 @@ namespace MonsterRPG.API.Controllers
         {
             return Ok($"{personage} - was update!");
         }
-
+        // api/prsonage/2
         [HttpPut("{id}")]
         public ActionResult SoftDeletePersonage(int id)
         {
             return Ok("Personage was deleted!");
         }
-
+        // api/prsonage/2
         [HttpDelete]
         public ActionResult DeletePersonage(int id)
         {
