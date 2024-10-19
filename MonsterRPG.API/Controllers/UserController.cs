@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MonsterRPG.API.Models.InputModels;
-using MonsterRPG.API.Models.OutputModels;
+using MonsterRPG.API.Models;
 using MonsterRPG.Buiness;
 using MonsterRPG.Buiness.Models;
 
@@ -12,7 +11,7 @@ namespace MonsterRPG.API.Controllers
     {
         //api/user 
         [HttpPost]
-        public ActionResult<UserOutputModel> AddUser(UserInsertInputModel model)
+        public ActionResult<UserOutputModel> AddUser([FromBody]UserInsertInputModel model)
         {
             return Ok("Успешно добавлен");
         }
@@ -24,7 +23,7 @@ namespace MonsterRPG.API.Controllers
         }
         // api/user/2
         [HttpGet("{id}")]
-        public ActionResult<UserModel> GetUserById(int id)
+        public ActionResult<UserOutputModel> GetUserById(int id)
         {
             //Если не нашли то
             return NotFound($"User{id} was noy found");
@@ -35,13 +34,13 @@ namespace MonsterRPG.API.Controllers
         }
         // api/user
         [HttpGet]
-        public ActionResult<List<UserModel>> GetUsers()
+        public ActionResult<List<UserSimpleOutputModel>> GetUsers()
         {
             return Ok();
         }
         // api/user/2
         [HttpPut("{id}")]
-        public ActionResult<UserOutputModel> UpdateUser(int id, UserUpdateInputModel model)
+        public ActionResult<UserSimpleOutputModel> UpdateUser(int id, [FromBody] UserUpdateInputModel model)
         {
             return Ok("Успешно изменен");
         }

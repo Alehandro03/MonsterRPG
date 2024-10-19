@@ -18,7 +18,7 @@ namespace MonsterRPG.Data.Entities
         public int Attack { get; set; }
         public int Armor { get; set; }
         public int Cash { get; set; }
-        public int NumberPersonage { get; set; }
+        public int? NumberPersonage { get; set; }
         public string WarCry { get; set; }
         public string DeadCry   { get; set; }
         public bool GoPVP { get; set; }

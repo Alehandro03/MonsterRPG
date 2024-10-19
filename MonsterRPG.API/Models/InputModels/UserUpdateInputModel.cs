@@ -1,10 +1,10 @@
 ﻿using MonsterRPG.Data.Entities;
 
-namespace MonsterRPG.API.Models.InputModels
+namespace MonsterRPG.API.Models
 {
     public class UserUpdateInputModel
     {
         public string NickName { get; set; }
-        public Personage Personage { get; set; }
+        public int Personage { get; set; }
     }
 }

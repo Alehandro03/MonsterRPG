@@ -10,7 +10,7 @@ namespace MonsterRPG.API.Controllers
     {
         //api/shop/item
         [HttpPost("/item")]
-        public ActionResult AddNewItemInShop(ItemModel item)
+        public ActionResult AddNewItemInShop([FromBody] ItemModel item)
         {
             return Ok($"{item} - was add in shop");
         }

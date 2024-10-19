@@ -10,10 +10,10 @@ namespace MonsterRPG.Buiness.Models
 {
     public class ItemModel
     {
-        public int Id { get; set; }
-        public virtual TypeOfItem TypeOfItem { get; set; }
-        public virtual Inventar Inventar { get; set; }
-        public virtual Shop Shop { get; set; }
+        public int? Id { get; set; }
+        public  TypeOfItem TypeOfItem { get; set; }
+        public  Inventar Inventar { get; set; }
+        public  Shop Shop { get; set; }
         public string Name { get; set; }
         public string Info { get; set; }
         public int Damage { get; set; }

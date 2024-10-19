@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using MonsterRPG.API.Models;
+using MonsterRPG.API.Models.InputModels;
+using MonsterRPG.API.Models.OutputModels;
 using MonsterRPG.Buiness;
 using MonsterRPG.Buiness.Models;
 
@@ -11,7 +14,7 @@ namespace MonsterRPG.API.Controllers
     {
         // api/prsonage/2
         [HttpGet("{id}")] // Прописываем в HTTP, рут для точного определения метода, в случае нескольких одинаковых запросах
-        public ActionResult<PersonageModel>GetPersonageById(int id)
+        public ActionResult<PersonageOutputModel> GetPersonageById(int id)
         {
             //Если не нашли то
             return NotFound($"Персонаж{id} не найден");
@@ -22,19 +25,19 @@ namespace MonsterRPG.API.Controllers
         }
         //api/personage
         [HttpGet] // Прописываем в HTTP, рут для точного определения метода, в случае нескольких одинаковых запросах
-        public ActionResult <List<PersonageModel>> GetAllPersonage()
+        public ActionResult <List<PersonageSimpleOutputModel>> GetAllPersonage()
         {
             return Ok(new List<PersonageModel>());
         }
         //api/personage
         [HttpPut]
-        public ActionResult UpdatePersonage(PersonageModel personage)
+        public ActionResult<PersonageOutputModel> UpdatePersonage([FromBody] PersonageUpdateInputModel personage)
         {
-            return Ok($"{personage} - was update!");
+            return Ok($"{personage.Name} - was update!");
         }
         // api/prsonage/2
         [HttpPut("{id}")]
-        public ActionResult SoftDeletePersonage(int id)
+        public ActionResult<PersonageOutputModel> SoftDeletePersonage(int id)
         {
             return Ok("Personage was deleted!");
         }

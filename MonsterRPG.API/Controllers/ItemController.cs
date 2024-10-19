@@ -44,7 +44,7 @@ namespace MonsterRPG.API.Controllers
         }
         // api/item/2
         [HttpPut("{id}/{item}")]
-        public ActionResult UpdateIten(int id, ItemModel item)
+        public ActionResult UpdateIten(int id, [FromBody] ItemModel item)
         {
             return Ok($"{item} - was update");
         }
