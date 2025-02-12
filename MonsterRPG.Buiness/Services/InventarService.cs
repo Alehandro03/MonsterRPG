@@ -10,7 +10,7 @@ namespace MonsterRPG.Buiness.Services
 {
     public class InventarService : IInventarService
     {
-        public ItemModel AddItemInInventar(ItemModel item)
+        public ItemModel AddItemInInventar(ItemModel item, InventarModel inventar)
         {
             throw new NotImplementedException();
         }
