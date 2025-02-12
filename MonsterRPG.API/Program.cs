@@ -1,6 +1,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MonsterRPG.API.Configuration.ExceptionResponse;
 using MonsterRPG.Data.ConnectDb;
 using System.Text.Json.Serialization;
 
